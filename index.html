@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Godoy - Desarrollador Full-Stack & Estudiante de Informática</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init('scuvADP9QxIlc3AaK');
+        })();
+    </script>
+</head>
+<body class="bg-beige text-gray-800 font-roboto">
+    <!-- Nav Sticky -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <ul class="flex justify-center space-x-8 py-4">
+            <li><a href="#home" class="hover:text-green-600 transition-colors">Inicio</a></li>
+            <li><a href="#about" class="hover:text-green-600 transition-colors">Sobre Mí</a></li>
+            <li><a href="#projects" class="hover:text-green-600 transition-colors">Proyectos</a></li>
+            <li><a href="#skills" class="hover:text-green-600 transition-colors">Habilidades</a></li>
+            <li><a href="#contact" class="hover:text-green-600 transition-colors">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-beige to-white px-4">
+        <div class="text-center max-w-4xl mx-auto">
+            <img src="assets/img/profile.jpeg" alt="Marcos Godoy" class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-6 shadow-lg border-4 border-green-500">
+            <h1 class="text-4xl md:text-6xl font-poppins font-bold mb-4 text-gray-800">Marcos David Godoy</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-6 font-roboto">Estudiante de Informática & Desarrollador Full-Stack</p>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">Futuro Técnico con mentalidad analítica y orientación a la resolución de problemas. Combino desarrollo software e infraestructura TI para soluciones con impacto real.</p>
+            <div class="space-x-4">
+                <a href="#projects" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105">Ver Proyectos</a>
+                <a href="#contact" class="border-2 border-green-500 text-green-500 px-6 py-3 rounded-lg hover:bg-green-50 transition-all duration-300 transform hover:scale-105">Contacto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-poppins font-bold text-center mb-12 text-gray-800">Sobre Mí</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg leading-relaxed mb-6">Soy un joven de 18 años con vocación por la informática, específicamente en programación. Pronto a egresarme del Instituto Técnico El Obraje como Técnico Personal y Profesional en Informática.</p>
+                    <p class="text-lg leading-relaxed mb-6">Busco oportunidades en desarrollo de software, freelance o empresas, mientras continúo con mis estudios. Me apasiona crear soluciones desde el análisis hasta la implementación, usando metodologías ágiles.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Egreso: 2025, Instituto El Obraje</li>
+                        <li>• Futuro: Ingeniería en Sistemas + Proyectos Personales</li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <img src="assets/img/profile.jpeg" alt="Marcos Godoy" class="w-48 h-48 rounded-full mx-auto shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 px-4 bg-beige">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-poppins font-bold text-center mb-12 text-gray-800">Proyectos Destacados</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AllWays Transporte -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onclick="openModal('allways')">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">AllWays Transporte</h3>
+                    <img src="assets/img/allwayslogo.jpg" alt="AllWays" class="w-full h-32 object-contain rounded mb-4">
+                    <p class="text-gray-600 mb-4 text-sm">Proyecto final: Solución integral para optimizar transporte público con backend, frontend y hardware.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Django</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Python</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Arduino</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Flutter</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">PostgreSQL</span>
+                    </div>
+                    <button class="ml-2 text-green-500 hover:underline text-sm">Ver Detalles</button>
+                </div>
+                <!-- Bóveda de Claves -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onclick="openModal('boveda')">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Bóveda de Claves - Cube Solutions</h3>
+                    <div class="w-full h-32 flex items-center justify-center bg-green-100 rounded mb-4"><i class="fas fa-lock text-4xl text-green-600"></i></div>
+                    <p class="text-gray-600 mb-4 text-sm">Colaboré en el diseño e implementación de una bóveda segura para uso interno, con equipo ágil.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">NestJS</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">TypeScript</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Flutter</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">MongoDB</span>
+                    </div>
+                    <button class="ml-2 text-green-500 hover:underline text-sm">Ver Detalles</button>
+                </div>
+                <!-- Placeholder para tercer proyecto -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Próximo Proyecto</h3>
+                    <p class="text-gray-600 mb-4 text-sm italic">Espacio para el desarrollo de un nuevo desafío.</p>
+                    <div class="flex justify-center mt-8">
+                        <p class="text-green-600 text-sm">Mi próximo proyecto puede ser el tuyo Contáctame y creemos algo juntos.</p>
+                    </div>
+                    <div class="flex justify-center mt-4">
+                        <a href="#contact" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105">Contactame</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-poppins font-bold text-center mb-12 text-gray-800">Habilidades</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Técnicas</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between"><span>Lenguajes: Python, JavaScript, TypeScript, SQL, PHP, Dart</span></li>
+                        <li class="flex justify-between"><span>Backend: Django, NestJS, Node.js</span></li>
+                        <li class="flex justify-between"><span>Frontend/Móvil: Flutter</span></li>
+                        <li class="flex justify-between"><span>Herramientas: Git, APIs RESTful, Arduino</span></li>
+                        <li class="flex justify-between"><span>infraestructura: Redes, Hardware, SO</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Blandas & Competencias</h3>
+                    <ul class="space-y-2">
+                        <li>• Gestión de Proyectos</li>
+                        <li>• Resolución de Problemas</li>
+                        <li>• Análisis Técnico</li>
+                        <li>• Trabajo en Equipo</li>
+                        <li>• Adaptabilidad & Aprendizaje Continuo</li>
+                        <li>• Capacidad de Liderazgo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-4 bg-beige">
+        <div class="max-w-md mx-auto">
+            <h2 class="text-3xl md:text-4xl font-poppins font-bold text-center mb-12 text-gray-800">Contacto</h2>
+            <form id="contactForm" class="space-y-4 mb-8">
+                <input type="text" id="name" name="user_name" placeholder="Tu Nombre" class="w-full p-3 border border-gray-300 rounded-lg focus:border-green-500 focus:outline-none transition">
+                <input type="email" id="email" name="user_email" placeholder="Tu Email" class="w-full p-3 border border-gray-300 rounded-lg focus:border-green-500 focus:outline-none transition">
+                <textarea id="message" name="message" rows="4" placeholder="Tu Mensaje" class="w-full p-3 border border-gray-300 rounded-lg focus:border-green-500 focus:outline-none transition"></textarea>
+                <button type="submit" class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105">Enviar Mensaje</button>
+            </form>
+            <div class="text-center space-y-4 text-sm">
+                <p><a href="mailto:marcosdavidgodoy129@gmail.com" class="text-green-500 hover:underline flex items-center justify-center gap-2"><i class="fas fa-envelope"></i> marcosdavidgodoy129@gmail.com</a></p>
+                <p class="flex justify-center items-center gap-4">
+                    <a href="https://linkedin.com/in/tu-perfil" class="text-green-500 hover:underline flex items-center gap-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/tuusuario" class="text-green-500 hover:underline flex items-center gap-2"><i class="fab fa-github"></i> GitHub</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-500 text-white py-12 px-4 mt-12 flex items-center">
+        <div class="max-w-md mx-auto text-center w-full">
+            <p class="text-xs font-roboto">&copy; 2025 Marcos David Godoy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal para Detalles de Proyecto -->
+    <div id="projectModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <div class="p-6">
+                <h3 id="modalTitle" class="text-2xl font-bold mb-4"></h3>
+                <div id="modalContent" class="prose max-w-none">
+                    <!-- Contenido dinámico via JS -->
+                </div>
+                <button onclick="closeModal()" class="mt-4 bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400 transition">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

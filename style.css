@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --green: #4CAF50;
+    --beige: #F5F5DC;
+}
+
+.bg-beige { background-color: var(--beige); }
+.text-green-600 { color: var(--green); }
+.border-green-500 { border-color: var(--green); }
+.bg-green-500 { background-color: var(--green); }
+.hover\:bg-green-600:hover { background-color: #45a049; }
+
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.font-poppins { font-family: 'Poppins', sans-serif; }
+
+/* Estilo para íconos de Font Awesome */
+.fa-envelope, .fa-phone, .fa-linkedin, .fa-github {
+    font-size: 1.2rem;
+    color: var(--green);
+    transition: color 0.3s ease;
+}
+
+a:hover .fa-envelope,
+a:hover .fa-phone,
+a:hover .fa-linkedin,
+a:hover .fa-github {
+    color: #45a049;
+}
+
+/* Ajuste de gap para flex */
+.contact-link {
+    gap: 0.5rem;
+}
+
+/* Alineación horizontal para LinkedIn y GitHub */
+.contact-socials a {
+    margin: 0 0.5rem; /* Espacio entre LinkedIn y GitHub */
+}
